@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 const Main = () => {
   return(
-    <Tab.Navigator tabBar={props => <CustomTabBar /> } screenOptions={{headerShown:false}}>
+    <Tab.Navigator tabBar={props => <CustomTabBar {...props} /> } screenOptions={{headerShown:false}}>
       <Tab.Screen name='Home' component={Home}  />
       <Tab.Screen name='Search' component={Search}  />
       <Tab.Screen name='MovieDetail' component={MovieDetail}  />

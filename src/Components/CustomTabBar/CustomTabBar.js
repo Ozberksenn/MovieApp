@@ -5,20 +5,20 @@ import  Icon  from 'react-native-vector-icons/Feather'
 import { useNavigation } from '@react-navigation/native'
 
 const CustomTabBar = () => {
-    const [focused,setFocused] = useState(0)
     const navigation = useNavigation()
+    const [focused,setFocused] = useState(1) // click olduğunda icon rengini değiştirebilmek için tanımladığımız state.
 
   return (
     <View>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-           <Icon onPress={() => setFocused(1)} style={[styles.icon, {color: focused === 1 ? "#000" : "#333"}]}  name="home" />
+        <TouchableOpacity onPress={() => navigation.navigate('Home') & setFocused(1)}>
+           <Icon style={[styles.icon, {color: focused === 1 ? "#fff" : "#000"}]}  name="home" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Search')}>
-            <Icon onPress={() => setFocused(2)} style={[styles.icon, {color: focused === 2 ? "#000" : "#333"}]}  name="search" />
+        <TouchableOpacity onPress={() => navigation.navigate('Search') & setFocused(2)}>
+            <Icon   style={[styles.icon, {color: focused === 2 ? "#fff" : "#000"}]}  name="search" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('MovieDetail')}>
-            <Icon onPress={() => setFocused(3)} style={[styles.icon, {color: focused === 3 ? "#000" : "#333"}]}  name="settings" />
+        <TouchableOpacity onPress={() => navigation.navigate('MovieDetail') & setFocused(3)}>
+            <Icon style={[styles.icon, {color: focused === 3 ? "#fff" : "#000"}]}  name="settings" />
         </TouchableOpacity>
       </View>
     </View>
