@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, SafeAreaView, Text } from 'react-native'
 import React from 'react'
-
+import styles from "./Home.style"
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView >
+        <View>
+          <Text style={styles.HomeTitle}>Home</Text>
+        </View>
+    </SafeAreaView>
   )
 }
 
