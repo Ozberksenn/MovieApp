@@ -4,12 +4,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import SignIn from './src/Screens/Login/SignIn/SignIn';
-import SignUp from './src/Screens/Login/SignUp/SignUp';
+import SignIn from './Screens/Login/SignIn/SignIn';
+import SignUp from './Screens/Login/SignUp/SignUp';
 
-import Home from "./src/Screens/Main/Home/Home"
-import Search from "./src/Screens/Main/Search/Search"
-import MovieDetail from "./src/Screens/Main/MovieDetail/MovieDetail"
+import Home from "./Screens/Main/Home/Home"
+import Search from "./Screens/Main/Search/Search"
+import MovieDetail from "./Screens/Main/MovieDetail/MovieDetail"
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

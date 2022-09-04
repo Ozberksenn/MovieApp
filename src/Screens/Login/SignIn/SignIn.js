@@ -3,7 +3,8 @@ import React from 'react'
 import styles from "./SignIn.style"
 import Input from '../../../Components/Input/Input'
 import Button from '../../../Components/Button/Button'
-const SignIn = () => {
+const SignIn = ({navigation}) => {
+  
   return (
     <SafeAreaView style={styles.container} >
       <View >
@@ -17,8 +18,8 @@ const SignIn = () => {
           <Button ButtonName="Sign In" />
         </View>
         <View>
-          <Text style={styles.accountText}>Don't Have an account ? </Text>
-          <Button  ButtonName="Sign Up" />
+          <Text style={styles.accountText}>Don't Have An Account ? </Text>
+          <Button onPress={() => navigation.navigate('SignUp')}  ButtonName="Sign Up" />
         </View>
       </View>
     </SafeAreaView>

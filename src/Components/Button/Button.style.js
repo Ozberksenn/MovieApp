@@ -8,10 +8,13 @@ export default StyleSheet.create({
         elevation:5,
         backgroundColor:"#fff",
         borderRadius:15,
+        borderWidth:1,
+        borderColor:"#395B64",
+        
     },
     ButtonName : {
         fontSize:18,
-        color:"2C3333",
+        color:"#2C3333",
         padding:10,
         textAlign:"center",
         fontStyle:"italic",

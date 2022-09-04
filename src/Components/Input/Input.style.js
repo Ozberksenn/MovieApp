@@ -12,5 +12,6 @@ export default StyleSheet.create({
     inputText : {
         fontSize:16,
         color:"#A5C9CA",  
+        left:10,
     },
 })
