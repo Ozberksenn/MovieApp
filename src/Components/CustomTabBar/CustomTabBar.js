@@ -12,7 +12,7 @@ const CustomTabBar = () => {
     <View>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('Home') & setFocused(1)}>
-           <Icon style={[styles.icon, {color: focused === 1 ? "#fff" : "#000"}]}  name="home" />
+           <Icon style={[styles.icon, {color: focused === 1 ? "#fff" : "#000"}]}  name="tv" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Search') & setFocused(2)}>
             <Icon   style={[styles.icon, {color: focused === 2 ? "#fff" : "#000"}]}  name="search" />

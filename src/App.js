@@ -9,7 +9,10 @@ import SignUp from './Screens/Login/SignUp/SignUp';
 
 import Home from "./Screens/Main/Home/Home"
 import Search from "./Screens/Main/Search/Search"
+
 import MovieDetail from "./Screens/Main/MovieDetail/MovieDetail"
+import ThemeScreen from "./Screens/Main/MovieDetail/Theme/Theme" 
+import EditProfile from "./Screens/Main/MovieDetail/EditProfile/EditProfile"
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,6 +24,7 @@ const Main = () => {
       <Tab.Screen name='Home' component={Home}  />
       <Tab.Screen name='Search' component={Search}  />
       <Tab.Screen name='MovieDetail' component={MovieDetail}  />
+      
     </Tab.Navigator>
   )
 }
@@ -37,9 +41,11 @@ const Login = () => {
 const App = () => {
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName='Login' screenOptions={{headerShown:false}} >
+      <Stack.Navigator  screenOptions={{headerShown:false}} >
         <Stack.Screen name='Main' component={Main} />
         <Stack.Screen name='Login' component={Login}  />
+        <Stack.Screen name='ThemeScreen' component={ThemeScreen} />
+        <Stack.Screen name='EditProfile' component={EditProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   )
