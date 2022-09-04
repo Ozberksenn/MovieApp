@@ -15,7 +15,7 @@ const SignIn = ({navigation}) => {
           <Text style={styles.titleSignIn}>Sign In</Text>
           <Input placeholder="Please can you enter the mail" />
           <Input placeholder="Please can you enter the password" />
-          <Button ButtonName="Sign In" />
+          <Button onPress={() => navigation.navigate('Main')} ButtonName="Sign In" />
         </View>
         <View>
           <Text style={styles.accountText}>Don't Have An Account ? </Text>

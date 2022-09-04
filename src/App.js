@@ -1,8 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import CustomTabBar from './Components/CustomTabBar/CustomTabBar';
 
 import SignIn from './Screens/Login/SignIn/SignIn';
 import SignUp from './Screens/Login/SignUp/SignUp';
@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 const Main = () => {
   return(
-    <Tab.Navigator screenOptions={{headerShown:false}}>
+    <Tab.Navigator tabBar={props => <CustomTabBar /> } screenOptions={{headerShown:false}}>
       <Tab.Screen name='Home' component={Home}  />
       <Tab.Screen name='Search' component={Search}  />
       <Tab.Screen name='MovieDetail' component={MovieDetail}  />
