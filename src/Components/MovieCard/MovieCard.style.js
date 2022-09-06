@@ -15,13 +15,15 @@ export default StyleSheet.create({
     MovieTitle : {
         fontSize:20,
         color:"#000",
+        fontWeight:"bold",
     },
     description : {
         fontSize:14,
         color:"#333",
+        
     },
     rated : {
         fontSize:16,
-        color:"#000",
+        color:"#A25B5B",
     },
 })

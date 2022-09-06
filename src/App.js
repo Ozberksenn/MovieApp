@@ -48,8 +48,8 @@ const App = () => {
     <Provider store={store}>
       <NavigationContainer >
         <Stack.Navigator  screenOptions={{headerShown:false}} >
-          <Stack.Screen name='Main' component={Main} />
           <Stack.Screen name='Login' component={Login}  />
+          <Stack.Screen name='Main' component={Main} />
           <Stack.Screen name='ThemeScreen' component={ThemeScreen} />
           <Stack.Screen name='EditProfile' component={EditProfile} />
           <Stack.Screen name='Movie' component={Movie} />

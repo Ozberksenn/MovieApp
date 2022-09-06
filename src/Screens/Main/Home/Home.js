@@ -4,8 +4,10 @@ import styles from "./Home.style"
 import FilterButton from '../../../Components/FilterButton/FilterButton'
 import axios from 'axios'
 import MovieCard from '../../../Components/MovieCard/MovieCard'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+  const {activeTheme} = useSelector(state => state.theme)
   const [fetchData,setFetchData] = useState([])
 
   useEffect(() => {
@@ -37,9 +39,9 @@ const Home = () => {
   }
   // console.log(fetchData)
   return (
-    <SafeAreaView style={styles.Homecontainer} >
+    <SafeAreaView style={[styles.Homecontainer,{backgroundColor:activeTheme.backgroundColor}]} >
         <View>
-          <Text style={styles.HomeTitle}>Home</Text>
+          <Text style={[styles.HomeTitle,{color:activeTheme.headerTitle}]}>Home</Text>
         </View>
         <View>
           <ScrollView horizontal={true} >

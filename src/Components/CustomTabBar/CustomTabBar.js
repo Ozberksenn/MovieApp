@@ -3,13 +3,15 @@ import React,{useState} from 'react'
 import styles from "./CustomTabBar.style"
 import  Icon  from 'react-native-vector-icons/Feather'
 import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
 
 const CustomTabBar = () => {
+    const {activeTheme} = useSelector(state => state.theme)
     const navigation = useNavigation()
     const [focused,setFocused] = useState(1) // click olduğunda icon rengini değiştirebilmek için tanımladığımız state.
 
   return (
-    <View>
+    <View style={{backgroundColor:activeTheme.backgroundColor}}>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('Home') & setFocused(1)}>
            <Icon style={[styles.icon, {color: focused === 1 ? "#fff" : "#000"}]}  name="tv" />
