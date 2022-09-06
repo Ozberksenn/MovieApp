@@ -2,6 +2,8 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Provider } from 'react-redux'
+import store from "./redux/Store"
 import CustomTabBar from './Components/CustomTabBar/CustomTabBar';
 
 import SignIn from './Screens/Login/SignIn/SignIn';
@@ -43,15 +45,17 @@ const Login = () => {
 
 const App = () => {
   return (
-    <NavigationContainer >
-      <Stack.Navigator  screenOptions={{headerShown:false}} >
-        <Stack.Screen name='Main' component={Main} />
-        <Stack.Screen name='Login' component={Login}  />
-        <Stack.Screen name='ThemeScreen' component={ThemeScreen} />
-        <Stack.Screen name='EditProfile' component={EditProfile} />
-        <Stack.Screen name='Movie' component={Movie} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer >
+        <Stack.Navigator  screenOptions={{headerShown:false}} >
+          <Stack.Screen name='Main' component={Main} />
+          <Stack.Screen name='Login' component={Login}  />
+          <Stack.Screen name='ThemeScreen' component={ThemeScreen} />
+          <Stack.Screen name='EditProfile' component={EditProfile} />
+          <Stack.Screen name='Movie' component={Movie} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   )
 }
 
