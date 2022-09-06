@@ -6,7 +6,7 @@ const Search = () => {
   const {activeTheme} = useSelector(state => state.theme)
   return (
     <View style={[styles.container,{backgroundColor:activeTheme.backgroundColor}]}>
-      <Text style={styles.searchTitle}>Search</Text>
+      <Text style={[styles.searchTitle,{color:activeTheme.headerTitle}]}>Search</Text>
       <View style={styles.searchInput}>
         <TextInput placeholderTextColor="#000" style={styles.searchInputText} placeholder='Search'  />
       </View>

@@ -1,7 +1,7 @@
 import { StyleSheet,Dimensions } from "react-native";
 
 export default StyleSheet.create({
-    container : {flex:1,backgroundColor:"#CFD2CF"},
+    container : {flex:1,backgroundColor:"#fff"},
     Header  : {
         textAlign:"center",
         fontSize:24,
@@ -9,9 +9,11 @@ export default StyleSheet.create({
         marginBottom:10,
     },
     moviePhoto : {
-        width:Dimensions.get('window').width /1.2,
+        flexDirection:"column-reverse",
+        marginBottom:10,
+        width:Dimensions.get('window').width,
         height: Dimensions.get('window').height / 4,
-        resizeMode:"contain",
+        resizeMode:"stretch",
     },
     movieName : {
         marginLeft:5,

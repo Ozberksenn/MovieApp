@@ -9,6 +9,7 @@ export default StyleSheet.create({
         resizeMode:"contain",
     },
     Content : {
+        flex:1,
         marginLeft:5,
         justifyContent:"space-between",
     },
@@ -18,6 +19,7 @@ export default StyleSheet.create({
         fontWeight:"bold",
     },
     description : {
+        marginRight:10,
         fontSize:14,
         color:"#333",
         
