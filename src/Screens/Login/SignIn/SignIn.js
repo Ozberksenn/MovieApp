@@ -9,17 +9,16 @@ import axios from 'axios';
 
 const SignIn = ({navigation}) => {
   const {activeTheme} = useSelector(state => state.theme);
-  const {userInfo} = useSelector(state => state.user);
   const dispatch = useDispatch();
   const [mail, setSign_Mail] = useState();
   const [password, setSign_Password] = useState();
-  const [signGet, setSignGet] = useState();
 
   const handleSignIn = async () => {
     let isUserFound = false;
     if (mail && password) {
       const response = await axios.get('http://10.0.2.2:3000/users');
       response.data.map(e => {
+        // get methodu ile çektiğimiz json server datamızı mapliyoruz.
         if (e.email === mail && e.password === password) {
           isUserFound = true;
           dispatch(

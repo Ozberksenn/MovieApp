@@ -12,7 +12,7 @@ const EditProfile = () => {
   const dispatch = useDispatch();
   const {activeTheme} = useSelector(state => state.theme);
   const {userInfo} = useSelector(state => state.user);
-  const [local, setLocal] = useState();
+  const [local, setLocal] = useState(); // local storage den çektiğim bilgiler bu state de tutuluyor.
 
   const [mail, setEditMail] = useState();
   const [password, setEditPassword] = useState();

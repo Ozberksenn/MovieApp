@@ -19,13 +19,21 @@ export const userSlice = createSlice({
       state.userInfo = action.payload;
     },
     updateUser: (state, action) => {
-      // axios.put('http://10.0.2.2:3000/users',action.payload)
+      //   axios.put(
+      //     `http://10.0.2.2:3000/users?email=${action.payload.email}`,
+      //     action.payload,
+      //   );
+      console.log('action payload email :', action.payload.email);
       AsyncStorage.setItem('userKey', JSON.stringify(action.payload));
+      state.userInfo = action.payload;
+    },
+    outUser: (state, action) => {
+      AsyncStorage.removeItem('userKey');
       state.userInfo = action.payload;
     },
   },
 });
 
-export const {setUser, addUser, updateUser} = userSlice.actions;
+export const {setUser, addUser, updateUser, outUser} = userSlice.actions;
 
 export default userSlice.reducer;
