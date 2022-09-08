@@ -13,6 +13,27 @@
       "userName": "michael",
       "password": "1234567",
       "passwordAgain": "1234567"
+    },
+    {
+      "email": "asd",
+      "userName": "asd",
+      "password": "asd",
+      "passwordAgain": "asd",
+      "id": 3
+    },
+    {
+      "email": "yusufeneszenler@gmail.com",
+      "userName": "eneszenler",
+      "password": "yusuf123",
+      "passwordAgain": "yusuf123",
+      "id": 4
+    },
+    {
+      "email": "deneme",
+      "userName": "deneme",
+      "password": "1",
+      "passwordAgain": "1",
+      "id": 5
     }
   ]
 }

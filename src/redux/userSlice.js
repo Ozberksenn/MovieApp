@@ -7,8 +7,8 @@ export const userSlice = createSlice({
         userInfo : {}
     },
     reducers : {
-        setUser : (state,action) => {
-             AsyncStorage.setItem('userKey',JSON.stringify(action.payload))
+        setUser :  (state,action) => {
+            AsyncStorage.setItem('userKey',JSON.stringify(action.payload))
             console.log("SignIn state içerisinde ki değerler: ",action.payload)
             state.userInfo = action.payload
   
