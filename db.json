@@ -1,26 +1,18 @@
 {
-    "users" : [
-        {
-            "id" : 1,
-            "email" : "ozberksenn@gmail.com",
-            "userName": "ozberksen",
-            "password" : "123456",
-            "passwordAgain" : "123456"
-        },
-        {
-            "id" : 2,
-            "email" : "michael@gmail.com",
-            "userName": "michael",
-            "password" : "1234567",
-            "passwordAgain" : "1234567"
-        },
-        {
-            "id" : 3,
-            "email" : "dwight@gmail.com",
-            "userName": "dwightSchurte",
-            "password" : "123321",
-            "passwordAgain" : "123321"
-        }
-
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "ozberksenn@gmail.com",
+      "userName": "ozberksen",
+      "password": "123456",
+      "passwordAgain": "123456"
+    },
+    {
+      "id": 2,
+      "email": "michael@gmail.com",
+      "userName": "michael",
+      "password": "1234567",
+      "passwordAgain": "1234567"
+    }
+  ]
 }

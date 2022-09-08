@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from 'react-redux'
+import { useSelector } from 'react-redux';
 import store from "./redux/Store"
 import CustomTabBar from './Components/CustomTabBar/CustomTabBar';
 
@@ -35,6 +36,10 @@ const Main = () => {
 }
 
 const Login = () => {
+  const {userInfo} = useSelector(state => state.user);
+  useEffect(() => {
+    console.log('App js de tanımladığımız user Info : ',userInfo)
+  }, [userInfo])
   return(
     <Stack.Navigator screenOptions={{headerShown:false}} >
       <Stack.Screen name="SignIn" component={SignIn} />
@@ -42,6 +47,9 @@ const Login = () => {
     </Stack.Navigator>
   )
 }
+
+
+
 
 const App = () => {
   return (

@@ -1,5 +1,5 @@
 import { View, Text,TextInput,FlatList, Button } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import styles from "./Search.style"
 import { useSelector } from 'react-redux'
 import MovieCard from '../../../Components/MovieCard/MovieCard'
@@ -12,18 +12,8 @@ const Search = () => {
   const handleSubmit = async () => {
     const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=84c4c1e940f1e77c4ef491c8ff9ede7e&language=en-US&query=${search}&page=1&include_adult=false`)
     setSearchData(response.data.results)
-  }
+  } // film adına göre filtreleme işlemi yapıldı.
 
-
-  // const filtred = value => {
-  //   const filtredList = searchData.filter(item => {
-  //     const searchText = value.toLowerCase();
-  //     const currentTitle = item.title.toLowerCase();
-  //     return currentTitle.indexOf(searchText) > -1;
-  //   })
-  //   setSearch(filtredList)
-  //   setSearchData(search)
-  // }
   
   return (
     <View style={[styles.container,{backgroundColor:activeTheme.backgroundColor}]}>
