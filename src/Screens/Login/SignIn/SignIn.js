@@ -13,37 +13,33 @@ const SignIn = ({navigation}) => {
   const dispatch = useDispatch();
   const [mail, setSign_Mail] = useState();
   const [password, setSign_Password] = useState();
-  const [signGet,setSignGet] = useState();
+  const [signGet, setSignGet] = useState();
 
   const handleSignIn = async () => {
-    let isUserFound = false
+    let isUserFound = false;
     if (mail && password) {
-    const response =  await axios.get('http://10.0.2.2:3000/users') 
-    response.data.map((e) => { 
-      if(e.email === mail && e.password === password){
-        isUserFound=true
-        dispatch(setUser({email:e.email,userName:e.userName,password:e.password,passwordAgain:e.passwordAgain})) // set user statemize email ve password bilgilerini async storageye yazdırmak için gönderiyoruz.
-        navigation.navigate('Main');
+      const response = await axios.get('http://10.0.2.2:3000/users');
+      response.data.map(e => {
+        if (e.email === mail && e.password === password) {
+          isUserFound = true;
+          dispatch(
+            setUser({
+              email: e.email,
+              userName: e.userName,
+              password: e.password,
+              passwordAgain: e.passwordAgain,
+            }),
+          ); // set user statemize email ve password bilgilerini async storageye yazdırmak için gönderiyoruz.
+          navigation.navigate('Main');
+        }
+      });
+      if (!isUserFound) {
+        Alert.alert('Warning', 'User not found!');
       }
-    })  
-    if(!isUserFound){
-      Alert.alert('Warning','User not found!')
-    }
     } else {
       Alert.alert('Wrong', 'Information should not be empty');
     }
   };
-
-  // const getUser = async () => {
-  //   const userData = await AsyncStoragee.getItem('userKey');
-  //   const local = userData ? JSON.parse(userData) : null;
-  //   setLocal(local);
-  //   console.log(local)
-  // };
-
-  // useEffect(() => {
-  //   getUser()
-  // }, [])
 
   return (
     <SafeAreaView

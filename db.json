@@ -34,6 +34,20 @@
       "password": "1",
       "passwordAgain": "1",
       "id": 5
+    },
+    {
+      "email": "deneme",
+      "userName": "deneme",
+      "password": "1",
+      "passwordAgain": "1",
+      "id": 6
+    },
+    {
+      "email": "denemeiki",
+      "userName": "denemeiki",
+      "password": "2",
+      "passwordAgain": "2",
+      "id": 7
     }
   ]
 }
