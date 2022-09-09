@@ -15,16 +15,6 @@
       "passwordAgain": "1234567"
     },
     {
-      "email": "asd",
-      "userName": "asd",
-      "password": "asd",
-      "passwordAgain": "asd",
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
       "email": "deneme",
       "userName": "deneme",
       "password": "1",

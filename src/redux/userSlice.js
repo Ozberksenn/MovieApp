@@ -9,7 +9,6 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       AsyncStorage.setItem('userKey', JSON.stringify(action.payload));
-      console.log('SignIn state içerisinde ki değerler: ', action.payload);
       state.userInfo = action.payload;
     },
     addUser: (state, action) => {
@@ -23,13 +22,13 @@ export const userSlice = createSlice({
       //     `http://10.0.2.2:3000/users?email=${action.payload.email}`,
       //     action.payload,
       //   );
-      console.log('action payload email :', action.payload.email);
       AsyncStorage.setItem('userKey', JSON.stringify(action.payload));
       state.userInfo = action.payload;
     },
     outUser: (state, action) => {
       AsyncStorage.removeItem('userKey');
       state.userInfo = action.payload;
+      // kullanıcı çıkış yapmak istediğinde kullanılacak olan slice.
     },
   },
 });
