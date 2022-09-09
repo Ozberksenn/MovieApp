@@ -2,10 +2,10 @@
   "users": [
     {
       "id": 2,
-      "email": "michael@gmail.com",
+      "email": "dwight@gmail.com",
       "userName": "michael",
-      "password": "1234567",
-      "passwordAgain": "1234567"
+      "password": "987654",
+      "passwordAgain": "987654"
     },
     {
       "id": 3,
@@ -48,6 +48,13 @@
       "userName": "olacak",
       "password": "olacak1111",
       "passwordAgain": "olacak1111"
+    },
+    {
+      "email": "ozberksenn@gmail.com",
+      "userName": "Ozberk",
+      "password": "11111",
+      "passwordAgain": "11111",
+      "id": 9
     }
   ]
 }
