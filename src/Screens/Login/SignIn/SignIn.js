@@ -30,7 +30,6 @@ const SignIn = ({navigation}) => {
               passwordAgain: e.passwordAgain,
             }),
           ); // set user statemize email ve password bilgilerini async storageye yazdırmak için gönderiyoruz.
-          navigation.navigate('Main');
         }
       });
       if (!isUserFound) {
@@ -61,13 +60,13 @@ const SignIn = ({navigation}) => {
           <Input
             value={mail}
             onChangeText={value => setSign_Mail(value)}
-            placeholder="Please can you enter the mail"
+            placeholder="Mail"
           />
           <Input
             secure
             value={password}
             onChangeText={value => setSign_Password(value)}
-            placeholder="Please can you enter the password"
+            placeholder="Password"
           />
           <Button onPress={handleSignIn} ButtonName="Sign In" />
         </View>

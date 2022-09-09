@@ -16,7 +16,6 @@ const SignUp = ({navigation}) => {
   const handleSignUp = () => {
     if (userName && password && passwordAgain && mail) {
       postRequests();
-      // navigation.navigate('SignIn_one');
       Alert.alert(
         'Successed',
         'Your registration has been successfully completed',

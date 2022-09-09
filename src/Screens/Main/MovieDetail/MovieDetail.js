@@ -1,20 +1,20 @@
-import {View, SafeAreaView, Image} from 'react-native';
+import {View, SafeAreaView, Image, Text} from 'react-native';
 import React from 'react';
 import styles from './MovieDetail.style';
 import Button from '../../../Components/Button/Button';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
-import {outUser} from '../../../redux/userSlice';
+import {logout} from '../../../redux/userSlice';
 const MovieDetail = () => {
   const dispatch = useDispatch();
   const {activeTheme} = useSelector(state => state.theme);
+  const {userInfo} = useSelector(state => state.user);
   const navigation = useNavigation();
 
   const handleLogOut = () => {
-    dispatch(outUser({}));
-    navigation.navigate('SignIn_one');
+    dispatch(logout({}));
   };
-
+  console.log('user Info', userInfo);
   return (
     <SafeAreaView
       style={[
@@ -30,6 +30,7 @@ const MovieDetail = () => {
             }}
           />
         </View>
+        <Text style={styles.userName}>{userInfo.userName}</Text>
         <View>
           <Button
             onPress={() => navigation.navigate('ThemeScreen')}

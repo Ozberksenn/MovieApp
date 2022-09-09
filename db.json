@@ -8,11 +8,11 @@
       "passwordAgain": "1234567"
     },
     {
-      "email": "deneme",
+      "id": 3,
+      "email": "denemes",
       "userName": "deneme",
       "password": "123",
-      "passwordAgain": "123",
-      "id": 3
+      "passwordAgain": "123"
     },
     {
       "email": "deneme2",
@@ -36,11 +36,11 @@
       "id": 6
     },
     {
-      "email": "as",
+      "id": 7,
+      "email": "asa",
       "userName": "as",
-      "password": "as",
-      "passwordAgain": "as",
-      "id": 7
+      "password": "asa",
+      "passwordAgain": "asa"
     },
     {
       "id": 8,

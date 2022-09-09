@@ -41,6 +41,7 @@ const EditProfile = () => {
           passwordAgain: passwordAgain,
         }),
       ); // bilgileri global state de değiştirdik.
+      Alert.alert('Success', 'Your information has been succesfully updated.');
       navigation.navigate('MovieDetail');
     } else {
       Alert.alert('Warning', 'values should not be empty');

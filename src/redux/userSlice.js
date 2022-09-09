@@ -24,7 +24,7 @@ export const userSlice = createSlice({
       AsyncStorage.setItem('userKey', JSON.stringify(action.payload));
       state.userInfo = action.payload;
     },
-    outUser: (state, action) => {
+    logout: (state, action) => {
       AsyncStorage.removeItem('userKey');
       state.userInfo = action.payload;
       // kullanıcı çıkış yapmak istediğinde kullanılacak olan slice.
@@ -32,6 +32,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const {setUser, addUser, updateUser, outUser} = userSlice.actions;
+export const {setUser, addUser, updateUser, logout} = userSlice.actions;
 
 export default userSlice.reducer;
