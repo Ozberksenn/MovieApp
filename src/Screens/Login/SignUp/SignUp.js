@@ -16,7 +16,11 @@ const SignUp = ({navigation}) => {
   const handleSignUp = () => {
     if (userName && password && passwordAgain && mail) {
       postRequests();
-      navigation.navigate('Main');
+      // navigation.navigate('SignIn_one');
+      Alert.alert(
+        'Successed',
+        'Your registration has been successfully completed',
+      );
     } else {
       Alert.alert('Wrong', 'Information should not be empty!');
     }
@@ -50,10 +54,12 @@ const SignUp = ({navigation}) => {
           placeholder="User Name"
         />
         <Input
+          secure
           onChangeText={value => setPassword(value)}
           placeholder="Password"
         />
         <Input
+          secure
           onChangeText={value => setPasswordAgain(value)}
           placeholder="Password(Again)"
         />

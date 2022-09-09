@@ -18,10 +18,9 @@ export const userSlice = createSlice({
       state.userInfo = action.payload;
     },
     updateUser: (state, action) => {
-      //   axios.put(
-      //     `http://10.0.2.2:3000/users?email=${action.payload.email}`,
-      //     action.payload,
-      //   );
+      const mailQuery = `http://10.0.2.2:3000/users/${action.payload.id}`;
+      axios.put(mailQuery, action.payload);
+      console.log('mailQuery : ', mailQuery);
       AsyncStorage.setItem('userKey', JSON.stringify(action.payload));
       state.userInfo = action.payload;
     },

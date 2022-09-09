@@ -1,5 +1,5 @@
 import {SafeAreaView, View, Text, Image, Alert} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './SignIn.style';
 import Input from '../../../Components/Input/Input';
 import Button from '../../../Components/Button/Button';
@@ -23,6 +23,7 @@ const SignIn = ({navigation}) => {
           isUserFound = true;
           dispatch(
             setUser({
+              id: e.id,
               email: e.email,
               userName: e.userName,
               password: e.password,
@@ -58,10 +59,13 @@ const SignIn = ({navigation}) => {
             Sign In
           </Text>
           <Input
+            value={mail}
             onChangeText={value => setSign_Mail(value)}
             placeholder="Please can you enter the mail"
           />
           <Input
+            secure
+            value={password}
             onChangeText={value => setSign_Password(value)}
             placeholder="Please can you enter the password"
           />

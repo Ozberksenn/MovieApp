@@ -11,7 +11,6 @@ const EditProfile = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const {activeTheme} = useSelector(state => state.theme);
-  const {userInfo} = useSelector(state => state.user);
   const [local, setLocal] = useState(); // local storage den çektiğim bilgiler bu state de tutuluyor.
 
   const [mail, setEditMail] = useState();
@@ -35,6 +34,7 @@ const EditProfile = () => {
     if (mail && password && local && passwordAgain) {
       dispatch(
         updateUser({
+          id: local.id,
           email: mail,
           userName: local.userName,
           password: password,
@@ -45,9 +45,7 @@ const EditProfile = () => {
     } else {
       Alert.alert('Warning', 'values should not be empty');
     }
-    console.log('Edit Profile : ', mail, password, passwordAgain);
   };
-  console.log('Edit Profil page then edited info, userInfo : ', userInfo);
 
   return (
     <SafeAreaView
@@ -64,12 +62,14 @@ const EditProfile = () => {
         />
         <Text style={styles.titles}>Password</Text>
         <Input
+          secure
           defaultValue={local?.password}
           onChangeText={value => setEditPassword(value)}
           placeholder="Password"
         />
         <Text style={styles.titles}>Password Again</Text>
         <Input
+          secure
           defaultValue={local?.passwordAgain}
           onChangeText={value => setEditPasswordAgain(value)}
           placeholder="Password Again"

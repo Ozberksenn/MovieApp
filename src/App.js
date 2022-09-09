@@ -3,7 +3,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Provider} from 'react-redux';
-import {useSelector} from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import store from './redux/Store';
@@ -16,7 +15,6 @@ import Movie from './Screens/Main/Movie/Movie';
 
 import Home from './Screens/Main/Home/Home';
 import Search from './Screens/Main/Search/Search';
-
 import MovieDetail from './Screens/Main/MovieDetail/MovieDetail';
 import ThemeScreen from './Screens/Main/MovieDetail/Theme/Theme';
 import EditProfile from './Screens/Main/MovieDetail/EditProfile/EditProfile';
@@ -27,7 +25,7 @@ const Tab = createBottomTabNavigator();
 const Main = () => {
   return (
     <Tab.Navigator
-      tabBar={props => <CustomTabBar {...props} />}
+      tabBar={props => <CustomTabBar {...props} />} // bottom tab navigation yapısını custom olarak oluşturduk.
       screenOptions={{headerShown: false}}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Search" component={Search} />
@@ -52,6 +50,7 @@ const App = () => {
     const response = await AsyncStorage.getItem('userKey');
     const local = response ? JSON.parse(response) : null;
     setLocalData(local);
+    console.log('local data', local);
   };
 
   useEffect(() => {

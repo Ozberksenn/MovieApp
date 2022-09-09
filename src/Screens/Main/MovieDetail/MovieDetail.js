@@ -12,7 +12,7 @@ const MovieDetail = () => {
 
   const handleLogOut = () => {
     dispatch(outUser({}));
-    navigation.navigate('SignIn');
+    navigation.navigate('SignIn_one');
   };
 
   return (
