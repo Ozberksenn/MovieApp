@@ -20,6 +20,7 @@ assignment-4-Ozberksenn created by GitHub Classroom
     <li>React Native Vector-Icons : https://github.com/oblador/react-native-vector-icons</li>
      <li>For API control : Postman</li>
   </ul>
+  <p>Redux Toolkit will be used for global state.</p>
   <p>
     Home Page : I will take requests. Top Rated, Latest, Popular and Upcoming on the home screen. I will render the three buttons horizontally.<br/>  
   </p>
