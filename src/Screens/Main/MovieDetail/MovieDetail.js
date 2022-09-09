@@ -14,7 +14,6 @@ const MovieDetail = () => {
   const handleLogOut = () => {
     dispatch(logout({}));
   };
-  console.log('user Info', userInfo);
   return (
     <SafeAreaView
       style={[
