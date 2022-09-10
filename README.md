@@ -40,6 +40,10 @@ assignment-4-Ozberksenn created by GitHub Classroom
     <li>Logout button : user data will be reset and automatically I will see the login screen</li>
     <li>Theme Screen : I will change the theme.</li>
   </ul>
+  
+  ![movieDetail](https://user-images.githubusercontent.com/96706849/189474604-cdc66822-7706-4fa1-8a33-791fd53c416f.jpg)
+
+  <p>when i click on a movie </P>
 
 
 
