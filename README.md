@@ -4,12 +4,11 @@ assignment-4-Ozberksenn created by GitHub Classroom
 
 <p>Light Theme</p>
 
-![movieAppLight](https://user-images.githubusercontent.com/96706849/189452791-d44521be-2bf5-4f7e-9dc5-8c449a6d3a86.jpg)
+![movieAppDark](https://user-images.githubusercontent.com/96706849/189464351-87378217-6eb0-480e-8d3d-172b0c771c47.jpg)
 
 <p>Dark Theme</p>
 
-![movieAppDark](https://user-images.githubusercontent.com/96706849/189452817-48c495e9-b89d-406a-a1a3-532a08893316.jpg)
-
+![movieAppLight](https://user-images.githubusercontent.com/96706849/189464353-de0dc35b-c19e-4664-9a78-bf1d3d66ae7e.jpg)
 
   <ul>
     <p>Used Packages:</p>
@@ -33,7 +32,7 @@ assignment-4-Ozberksenn created by GitHub Classroom
   
   <h3> PostMan  <h3>
     
-  ![postMan](https://user-images.githubusercontent.com/96706849/189456732-6d0adef2-d5eb-4f0b-9a2b-5e9c82a66f2c.jpg)
+![postMan](https://user-images.githubusercontent.com/96706849/189464355-231e054d-9e2f-4fba-9d4b-6abb2a7c97b8.jpg)
 
    <p> I update the user on the edit profile screen </p>
     
